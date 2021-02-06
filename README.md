@@ -141,7 +141,8 @@ class TestHandler implements HandlerInterface
 }
 ```
 
-### 
+- All handlers must implement [HandlerInterface](src/Http/HandlerInterface.php)
+- A handler is a middleware, handler is just a fancy name given to it.
 
 ### [Example](example)
 

@@ -18,6 +18,7 @@ class Middleware
     /**
      * Middleware constructor.
      * @param HandlerInterface ...$handler
+     * @throws InvalidArgumentException
      */
     public function __construct(...$handler)
     {
@@ -32,6 +33,7 @@ class Middleware
      * @param ServerRequestInterface $request
      * @return PromiseInterface
      * @throws JsonException
+     * @throws InvalidArgumentException
      */
     public function __invoke(ServerRequestInterface $request): PromiseInterface
     {

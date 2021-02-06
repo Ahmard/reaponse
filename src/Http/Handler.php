@@ -23,6 +23,12 @@ class Handler
     protected ResponseInterface $response;
 
 
+    /**
+     * Handler constructor.
+     * @param array $handlers
+     * @param ResponseInterface $response
+     * @throws InvalidArgumentException
+     */
     public function __construct(array $handlers, ResponseInterface $response)
     {
         $this->response = $response;
