@@ -1,0 +1,15 @@
+{
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "react/http": "^1.2",
+        "nette/utils": "^3.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": ">=0.12.70"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reaponse\\": "src/"
+        }
+    }
+}
