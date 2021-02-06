@@ -4,6 +4,7 @@
 namespace Reaponse\Http;
 
 
+use InvalidArgumentException;
 use Reaponse\ObjectStorage;
 use SplQueue;
 
@@ -27,6 +28,12 @@ class Handler
         $this->response = $response;
         $this->handlers = new SplQueue();
         foreach ($handlers as $handler) {
+            //make sure that all handlers implement HandlerInterface
+            if (!$handler instanceof HandlerInterface) {
+                $strHandler = get_class($handler);
+                throw new InvalidArgumentException("Handler {$strHandler} must implement Reaponse\Http\HandlerInterface");
+            }
+
             $this->handlers->push($handler);
         }
 
