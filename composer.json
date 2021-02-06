@@ -1,4 +1,15 @@
 {
+    "name": "ahmard/reaponse",
+    "description": "ReactPHP response helper",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["reactphp", "http", "socket", "response"],
+    "authors": [
+        {
+            "name": "Ahmard",
+            "email": "Ahmard06@gmail.com"
+        }
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "react/http": "^1.2",
